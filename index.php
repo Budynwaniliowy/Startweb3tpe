@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 			</section>
 			<section class="content">
 				<h1 class="align-center">Lista użytkowników</h1>
-				<?php //include ('templates/users.html.php'); ?>
+				<?php include ('templates/users.html.php'); ?>
 			</section>
 		</main>
 	</body>
