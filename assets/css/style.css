@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,100,700,900&subset=latin,latin-ext);
+@import url('font-awesome.min.css');
+
+html, body
+{
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color:#ffffff;
+	-webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+.content
+{
+	padding: 60px 0;
+}
+.button{
+	color: black;
+}
+
+body {
+	--bs-body-font-family: var(--bs-font-monospace);
+	--bs-body-line-height: 1.4;
+	--bs-body-color: #fff; 
+	--bs-body-bg: #01325a;
+  }
+  
+  .table {
+	--bs-table-color: #fff;
+	--bs-table-bg: #fff;	
+	--bs-table-border-color: transparent;
+  }
