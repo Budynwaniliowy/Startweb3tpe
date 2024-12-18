@@ -5,11 +5,14 @@
 		<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
 
-		<script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 	</head>
 	
 	<body>
 		<main>
+			<header>
+				<?php include('menu.html.php'); ?>
+			</header>
 			<section class="content">
 				<?php
 					$page = isset($_GET['page']) ? $_GET['page'] : 'index';
@@ -26,7 +29,7 @@
 					else
 					{
 						throw new Exception ('Cannot include file: ' . $actionFile);
-					}					
+					}			
 					//exit;
 				?>
 			</section>

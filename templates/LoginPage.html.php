@@ -1,76 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: url('blob-scene-haikei.svg');
-            background-size: cover;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-        .form-container {
-            width: 50%;
-            border: 1px solid white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(10px);
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-table td {
-            color: white;
-        }
-        .form-table label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="email"], input[type="password"], button[type="submit"] {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: calc(100% - 40px); /* Adjusted width to ensure it stays inside the padding */
-            margin: 0 auto;
-        }
-        input[type="email"]:hover, input[type="password"]:hover, button[type="submit"]:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-        }
-        button[type="submit"] {
-            background-color: #00008b; /* Dark blue */
-            border: 1px solid white; /* White border */
-        }
-    </style>
-</head>
-<body>
-    <div class="form-container">
-        <form>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Login</button>
-            </div>
-        </form>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.form-container').fadeIn(2000); 
-        });
-    </script>
-</body>
+<html data-bs-theme="dark">
+    <head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<script type="text/javascript" src="assets/js/bootstrap/bootstrap.min.js"></script>
+	</head>
+	
+	<body>
+		<main>
+			<section class="content">
+                <?php include ('templates/messages.html.php'); ?>
+                <div class="container">
+                    <div class="form">
+                        <form action="login.php" method="post">
+                            <div class="mb-4">
+                                <label class="form-label" for="email">Adres E-mail</label>
+                                <input id="email" class="form-control" type="email" name="email" placeholder="Adres E-mail" value="<?php if(isset($form['email'])): echo $form['email'];  endif;?>" require>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="password">Hasło</label>
+                                <input id="password" class="form-control" type="password" name="password" placeholder="Hasło" require />
+                            </div>
+                            <div class="mb-4 d-flex justify-content-end">
+                                <button class="btn btn-success" type="submit" name="submit">Wyślij</button>
+                            </div>                             
+                        </form>
+                    </div>
+                </div>
+			</section>
+		</main>
+    </body>
 </html>
