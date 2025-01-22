@@ -33,7 +33,7 @@
             </ul>
             <ul class="navbar-nav d-flex">
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Wyloguj</a>
+                    <a class="nav-link" href="logout.php" onclick="return confirm('Czy na pewno chcesz się wylogować?');">Wyloguj</a>
                 </li>
             </ul>
         </div>

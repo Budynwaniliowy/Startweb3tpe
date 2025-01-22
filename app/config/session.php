@@ -1,4 +1,4 @@
 <?php
 
-session_name('startweb3tpe');
+session_name('startweb3tp');
 session_start();
